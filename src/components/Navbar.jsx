@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const navItems = ['About', 'Skills', 'Experience', 'Education', 'Contact']
+const navItems = ['Works', 'Skills', 'Process', 'Experience', 'Contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <a href="#hero" className="nav-logo">
-        MB<span>.</span>
+        MB<span style={{background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>.</span>
       </a>
       <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
         {navItems.map(item => (
@@ -31,7 +31,7 @@ export default function Navbar() {
             className="nav-cta"
             onClick={() => setMenuOpen(false)}
           >
-            Hire Me
+            Get In Touch
           </a>
         </li>
       </ul>
